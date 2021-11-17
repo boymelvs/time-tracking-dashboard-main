@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+*,
+::before,
+::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --blue: hsl(246, 80%, 60%);
+
+   --light-red-work: hsl(15, 100%, 70%);
+   --soft-blue-play: hsl(195, 74%, 62%);
+   --light-red-study: hsl(348, 100%, 68%);
+   --lime-green-exercise: hsl(145, 58%, 55%);
+   --violet-social: hsl(264, 64%, 52%);
+   --soft-orange-selfcare: hsl(43, 84%, 65%);
+
+   --very-dark-blue: hsl(226, 43%, 10%);
+   --dark-blue: hsl(235, 46%, 20%);
+   --desaturated-blue: hsl(235, 45%, 61%);
+   --pale-blue: hsl(236, 100%, 87%);
+
+   --font-size-10: 62.5%; /* 10px */
+   --font-fam-rubik: "Rubik", sans-serif;
+   --font-weight-300: 300;
+   --font-weight-400: 400;
+   --font-weight-500: 500;
+}
+
+html {
+   font-size: var(--font-size-10);
+   font-family: var(--font-fam-rubik);
+}
+
+body {
+   font-size: 1.6rem;
+   font-weight: var(--font-weight-400);
+   background-color: var(--very-dark-blue);
+   color: var(--pale-blue);
+}
+
+footer {
+   text-align: center;
+}
+
+footer a {
+   text-decoration: none;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   min-width: 32rem;
+}
+
+.main_content {
+   display: flex;
+   flex-direction: column;
+   gap: 2rem; /* between each card */
+   max-width: 48.1rem;
+   margin: 3rem 2rem;
+}
+
+/* ================= profile is here ================= */
+.bio {
+   display: flex;
+   gap: 1rem;
+   align-items: center;
+   padding: 2rem;
+   font-size: 1.3rem;
+   border-radius: 1rem;
+   background-color: var(--blue);
+}
+
+.photo {
+   width: 6rem;
+   height: 6rem;
+   border-radius: 50%;
+   border: 0.2rem solid var(--pale-blue);
+}
+
+.name {
+   font-weight: var(--font-weight-600);
+}
+
+.name span {
+   display: block;
+   font-size: 1.6rem;
+}
+
+.timeframe_container {
+   background-color: var(--dark-blue);
+   border-radius: 0 0 1rem 1rem;
+   color: var(--desaturated-blue);
+   height: 100%;
+}
+
+.timeframe_container ul {
+   display: flex;
+   gap: 1rem;
+   justify-content: space-between;
+   align-items: center;
+   list-style-type: none;
+   padding: 2rem 3rem;
+}
+
+.daily:hover,
+.weekly:hover,
+.monthly:hover {
+   cursor: pointer;
+   color: var(--pale-blue);
+}
+
+/* ================= common css is here ================= */
+.card {
+   border-radius: 1rem;
+
+   background-position: top 0rem right 1rem;
+   background-repeat: no-repeat;
+   background-size: 5rem;
+}
+
+.tracker {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   gap: 0.5rem;
+   margin-top: 3.5rem;
+   padding: 3rem;
+   border-radius: 1rem;
+   background-color: var(--dark-blue);
+}
+
+.title_ellipsis_container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.title {
+   font-size: 1.8rem;
+}
+
+.icon_ellipsis:hover {
+   cursor: pointer;
+}
+
+.time_container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-weight: var(--font-weight-300);
+}
+
+.current {
+   font-size: 2.5rem;
+}
+
+.previous {
+   font-size: 1.3rem;
+}
+
+/* ================= bg of each tracker is here ================= */
+.work {
+   background-color: var(--light-red-work);
+   background-image: url("../images/icon-work.svg");
+}
+
+.play {
+   background-color: var(--soft-blue-play);
+   background-image: url("../images/icon-play.svg");
+}
+
+.study {
+   background-color: var(--light-red-study);
+   background-image: url("../images/icon-study.svg");
+}
+
+.exercise {
+   background-color: var(--lime-green-exercise);
+   background-image: url("../images/icon-exercise.svg");
+}
+
+.social {
+   background-color: var(--violet-social);
+   background-image: url("../images/icon-social.svg");
+}
+
+.selfcare {
+   background-color: var(--soft-orange-selfcare);
+   background-image: url("../images/icon-self-care.svg");
+}
