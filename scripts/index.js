@@ -68,7 +68,7 @@ const isActive = (timeframes, index) => {
 
 /* ================= getting data here ================= */
 const getData = async () => {
-   const res = await fetch("../data/data.json");
+   const res = await fetch("https://github.com/boymelvs/time-tracking-dashboard-main/blob/master/data/data.json");
    const data = await res.json().then((data) => {
       return data;
    });
