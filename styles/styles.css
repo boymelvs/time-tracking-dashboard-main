@@ -9,19 +9,19 @@
 }
 
 :root {
-   --blue: hsl(246, 80%, 60%);
+   --blue: #5847eb;
 
-   --light-red-work: hsl(15, 100%, 70%);
-   --soft-blue-play: hsl(195, 74%, 62%);
-   --light-red-study: hsl(348, 100%, 68%);
-   --lime-green-exercise: hsl(145, 58%, 55%);
-   --violet-social: hsl(264, 64%, 52%);
-   --soft-orange-selfcare: hsl(43, 84%, 65%);
+   --light-red-work: #ff8c66;
+   --soft-blue-play: #56c2e6;
+   --light-red-study: #ff5c7c;
+   --lime-green-exercise: #4acf81;
+   --violet-social: #7536d3;
+   --soft-orange-selfcare: #f1c65b;
 
-   --very-dark-blue: hsl(226, 43%, 10%);
-   --dark-blue: hsl(235, 46%, 20%);
-   --desaturated-blue: hsl(235, 45%, 61%);
-   --pale-blue: hsl(236, 100%, 87%);
+   --very-dark-blue: #0f1424;
+   --dark-blue: #1c1f4a;
+   --desaturated-blue: #6f76c8;
+   --pale-blue: #bdc1ff;
    --white: #fff;
 
    --font-size-10: 62.5%; /* 10px */
@@ -71,7 +71,9 @@ footer a {
 
 /* ================= profile is here ================= */
 .profile_container {
+   grid-column: span 3;
    grid-row: span 2;
+   width: calc(100rem / 4);
 }
 
 .bio {
@@ -126,6 +128,11 @@ footer a {
    color: var(--pale-blue);
 }
 
+.active {
+   cursor: pointer;
+   color: var(--pale-blue);
+}
+
 /* ================= card css is here ================= */
 .card {
    grid-column: span 3;
@@ -175,14 +182,14 @@ footer a {
    justify-content: center;
    gap: 2rem; /* between title & time_container */
    margin-top: 3.5rem; /* between card & tracker */
-   padding: 3rem;
+   padding: 3rem 2rem;
    border-radius: 1rem;
    background-color: var(--dark-blue);
 }
 
 .tracker:hover {
    cursor: pointer;
-   filter: brightness(117%);
+   filter: brightness(150%);
 }
 
 .title_ellipsis_container {
@@ -198,6 +205,7 @@ footer a {
 
 .icon_ellipsis:hover {
    cursor: pointer;
+   filter: brightness(150%);
 }
 
 /* time record is here */
@@ -244,7 +252,7 @@ footer a {
    }
 
    .name {
-      font-size: 2.3rem;
+      font-size: 2.2rem;
    }
 
    .timeframe_container ul {
@@ -262,6 +270,10 @@ footer a {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+   }
+
+   .current {
+      font-size: 2.5rem;
    }
 
    .current {
