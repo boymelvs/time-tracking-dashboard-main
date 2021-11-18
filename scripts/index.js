@@ -68,7 +68,7 @@ const isActive = (timeframes, index) => {
 
 /* ================= getting data here ================= */
 const getData = async () => {
-   const res = await fetch("../data.json");
+   const res = await fetch("../data/data.json");
    const data = await res.json().then((data) => {
       return data;
    });
