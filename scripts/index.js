@@ -2,6 +2,7 @@
 
 const mainContent = document.querySelector(".main_content");
 
+/* card element to be insert into DOM, formatted using Template Literals */
 let cardElem = `
             <div class="card ">
                <div class="tracker">
@@ -71,13 +72,13 @@ const isActive = (timeframes, index) => {
 /* ================= getting data here ================= */
 const getData = async () => {
    const res = await fetch("data.json");
-   const data = await res.json().then((data) => {
-      return data;
-   });
+   const data = await res.json().then((data) => data);
 
-   insertCard(data.length); /* call insertCard fn */
+   /* call insertCard fn */
+   insertCard(data.length);
 
-   insertData(data, "weekly"); /* call insertData fn */
+   /* call insertData fn, weekly as default active */
+   insertData(data, "weekly");
 
    /* waiting for click and become active */
    const timeframes = document.querySelectorAll(".timeframe");
