@@ -59,28 +59,29 @@ footer a {
    align-items: center;
    justify-content: center;
    gap: 2rem; /* between main_content & footer */
+   min-height: 100vh;
 }
 
 .main_content {
    display: grid;
    grid-template-columns: repeat(12, 1fr);
    grid-template-rows: repeat(2, 1fr);
-   gap: 2.5rem; /* between each card */
-   margin-top: 5%;
+   gap: 2rem; /* between each card */
+   margin: 0 2rem;
 }
 
 /* ================= profile is here ================= */
 .profile_container {
    grid-column: span 3;
    grid-row: span 2;
-   max-width: calc(102.4rem / 4);
+   max-width: calc(112rem / 4);
 }
 
 .bio {
    display: flex;
    flex-direction: column;
    gap: 4rem;
-   padding: 3rem;
+   padding: 3rem 2rem;
    border-radius: 1rem;
    background-color: var(--blue);
    font-size: 2rem;
@@ -115,8 +116,7 @@ footer a {
 .timeframe_container ul {
    display: flex;
    flex-direction: column;
-   gap: 1rem;
-
+   gap: 1rem; /* between timeframe */
    list-style-type: none;
    padding: 2rem 3rem;
 }
@@ -126,25 +126,28 @@ footer a {
 .monthly:hover {
    cursor: pointer;
    color: var(--pale-blue);
-   transform: scale(1.1);
 }
 
-.active {
+.daily.active,
+.weekly.active,
+.monthly.active {
    cursor: pointer;
-   transform: scale(1.1);
    color: var(--pale-blue);
+   transform: scale(1.1);
+   transition: transform 300ms;
 }
 
 /* ================= card css is here ================= */
 .card {
    grid-column: span 3;
    border-radius: 1rem;
-   max-width: calc(102.4rem / 4);
+   max-width: calc(112rem / 4);
 
    /* bg image attribute */
    background-position: top 0rem right 1rem;
    background-repeat: no-repeat;
    background-size: 5rem;
+   padding-top: 3.5rem;
 }
 
 /*  bg image of each card is here  */
@@ -183,10 +186,10 @@ footer a {
    flex-direction: column;
    justify-content: center;
    gap: 2rem; /* between title & time_container */
-   margin-top: 3.5rem; /* between card & tracker */
-   padding: 3rem 2rem;
+   padding: 3rem;
    border-radius: 1rem;
    background-color: var(--dark-blue);
+   height: 100%;
 }
 
 .tracker:hover {
@@ -208,6 +211,7 @@ footer a {
 .ellipsis:hover {
    cursor: pointer;
    transform: scale(1.2);
+   transition: transform 300ms;
 }
 
 /* time record is here */
@@ -218,7 +222,7 @@ footer a {
    font-weight: var(--font-weight-300);
 }
 
-.current {
+.current_time {
    font-size: 4rem;
 }
 
@@ -228,7 +232,7 @@ footer a {
 }
 
 /* ================= mobile screen start here ================= */
-@media (max-width: 47.8rem) {
+@media (max-width: 767px) {
    .container {
       min-width: 32rem;
    }
@@ -274,11 +278,7 @@ footer a {
       align-items: center;
    }
 
-   .current {
-      font-size: 2.5rem;
-   }
-
-   .current {
-      font-size: 2.5rem;
+   .current_time {
+      font-size: 3rem;
    }
 }

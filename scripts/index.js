@@ -44,17 +44,20 @@ const insertData = (data, time) => {
       card.classList.add(data[key].title.replace(/\s/g, "").toLowerCase());
       card.querySelector(".title").innerHTML = data[key].title;
 
-      /* insert current time */
-      const myUnit = data[key].timeframes[time].current > 1 ? "hrs" : "hr";
-      card.querySelector(".current_time").innerHTML = data[key].timeframes[time].current + myUnit;
+      /* time delay */
+      setTimeout(() => {
+         /* insert current time */
+         const myUnit = data[key].timeframes[time].current > 1 ? "hrs" : "hr";
+         card.querySelector(".current_time").innerHTML = data[key].timeframes[time].current + myUnit;
 
-      /* insert if yesterday, last week/month */
-      const itHappenWhen = time === "daily" ? "Yesterday" : time === "weekly" ? "Last Week" : "Last Month";
-      card.querySelector(".prev").innerHTML = itHappenWhen;
+         /* insert if yesterday, last week/month */
+         const itHappenWhen = time === "daily" ? "Yesterday" : time === "weekly" ? "Last Week" : "Last Month";
+         card.querySelector(".prev").innerHTML = itHappenWhen;
 
-      /* insert previous time */
-      const unit = data[key].timeframes[time].previous > 1 ? "hrs" : "hr";
-      card.querySelector(".prev_time").innerHTML = data[key].timeframes[time].previous + unit;
+         /* insert previous time */
+         const unit = data[key].timeframes[time].previous > 1 ? "hrs" : "hr";
+         card.querySelector(".prev_time").innerHTML = data[key].timeframes[time].previous + unit;
+      }, 300);
    });
 };
 
