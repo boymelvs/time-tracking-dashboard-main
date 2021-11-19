@@ -4,15 +4,15 @@ const mainContent = document.querySelector(".main_content");
 
 /* card element to be insert into DOM, formatted using Template Literals */
 let cardElem = `
+
             <div class="card ">
                <div class="tracker">
                   <div class="title_ellipsis_container">
                      <h2 class="title"></h2>
-                     <img
-                        src="./images/icon-ellipsis.svg"
-                        alt="ellipsis"
-                        class="icon_ellipsis"
-                     />
+
+                      <a href="#" class="ellipsis">
+                        <img src="./images/icon-ellipsis.svg" alt="ellipsis" class="icon_ellipsis" />
+                     </a>                     
                   </div>
 
                   <div class="time_container">

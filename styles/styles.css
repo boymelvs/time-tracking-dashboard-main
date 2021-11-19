@@ -126,10 +126,12 @@ footer a {
 .monthly:hover {
    cursor: pointer;
    color: var(--pale-blue);
+   transform: scale(1.1);
 }
 
 .active {
    cursor: pointer;
+   transform: scale(1.1);
    color: var(--pale-blue);
 }
 
@@ -203,9 +205,9 @@ footer a {
    font-weight: var(--font-weight-400);
 }
 
-.icon_ellipsis:hover {
+.ellipsis:hover {
    cursor: pointer;
-   filter: brightness(150%);
+   transform: scale(1.2);
 }
 
 /* time record is here */
@@ -261,7 +263,7 @@ footer a {
       align-items: center;
    }
 
-   /*  card css is here  */
+   /*  tracker css is here  */
    .tracker {
       gap: 0.5rem; /* between title & time_container */
    }
