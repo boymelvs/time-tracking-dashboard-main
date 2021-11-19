@@ -73,7 +73,7 @@ footer a {
 .profile_container {
    grid-column: span 3;
    grid-row: span 2;
-   width: calc(100rem / 4);
+   max-width: calc(102.4rem / 4);
 }
 
 .bio {
@@ -139,7 +139,7 @@ footer a {
 .card {
    grid-column: span 3;
    border-radius: 1rem;
-   width: calc(100rem / 4);
+   max-width: calc(102.4rem / 4);
 
    /* bg image attribute */
    background-position: top 0rem right 1rem;
@@ -228,7 +228,7 @@ footer a {
 }
 
 /* ================= mobile screen start here ================= */
-@media (max-width: 48.1rem) {
+@media (max-width: 47.8rem) {
    .container {
       min-width: 32rem;
    }
@@ -237,7 +237,7 @@ footer a {
       display: flex;
       flex-direction: column;
       margin: 3rem 2rem;
-      max-width: 48.1rem;
+      max-width: 48rem;
    }
 
    /*  profile is here  */
